@@ -1,2 +1,2 @@
-/rockmongo.iml
-/.idea/
+*.iml
+.idea

@@ -10,8 +10,10 @@ RUN apt update
 #install php5.6 and mongo extention
 RUN apt install -y php5.6 php5.6-mongo php5.6-fpm nginx git vim supervisor
 
-RUN git clone https://github.com/iwind/rockmongo.git /var/www/html/rockmongo
-ADD rockmongo/config.php /var/www/html/rockmongo/config.php
+#RUN git clone https://github.com/iwind/rockmongo.git /var/www/html/rockmongo
+#ADD rockmongo/config.php /var/www/html/rockmongo/config.php
+
+VOLUME /var/www/html
 
 ADD nginx/rockmongo.conf /etc/nginx/conf.d/
 ADD nginx/nginx.conf /etc/nginx/
